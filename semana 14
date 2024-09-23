@@ -1,0 +1,35 @@
+def calcular_descuento(monto_total, porcentaje_descuento=10):
+    """
+    Calcula el monto del descuento basado en el monto total de la compra y un porcentaje de descuento.
+
+    Parámetros:
+    monto_total (float): El monto total de la compra.
+    porcentaje_descuento (float): El porcentaje de descuento a aplicar (por defecto es 10).
+
+    Retorna:
+    float: El monto del descuento calculado.
+    """
+    descuento = (monto_total * porcentaje_descuento) / 100
+    return descuento
+
+def main():
+    # Primera llamada a la función con solo el monto total
+    monto_total1 = 150.00
+    descuento1 = calcular_descuento(monto_total1)
+    monto_final1 = monto_total1 - descuento1
+    print(f"Monto Total: ${monto_total1:.2f}")
+    print(f"Descuento: ${descuento1:.2f} (10% por defecto)")
+    print(f"Monto Final a Pagar: ${monto_final1:.2f}\n")
+
+    # Segunda llamada a la función con monto total y un porcentaje de descuento específico
+    monto_total2 = 200.00
+    porcentaje_descuento2 = 15
+    descuento2 = calcular_descuento(monto_total2, porcentaje_descuento2)
+    monto_final2 = monto_total2 - descuento2
+    print(f"Monto Total: ${monto_total2:.2f}")
+    print(f"Descuento: ${descuento2:.2f} ({porcentaje_descuento2}%)")
+    print(f"Monto Final a Pagar: ${monto_final2:.2f}")
+git add nombre_del_archivo.py
+git commit -m "Añadida función calcular_descuento para aplicar descuentos"
+git push origin main
+
