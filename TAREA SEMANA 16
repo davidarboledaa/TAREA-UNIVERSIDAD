@@ -1,0 +1,33 @@
+# Escritura de Archivo de Texto
+# Creamos un nuevo archivo llamado my_notes.txt y escribimos notas en él
+
+# Abre el archivo en modo escritura ('w')
+with open('my_notes.txt', 'w') as file:
+    # Escribimos tres líneas de notas personales
+    file.write("Esta es la primera nota personal.\n")
+    file.write("Aquí tengo otra nota sobre un libro que quiero leer.\n")
+    file.write("No olvides hacer ejercicio todos los días.\n")
+
+# Lectura de Archivo de Texto
+# Ahora abrimos el archivo my_notes.txt para leer su contenido
+
+# Abre el archivo en modo lectura ('r')
+with open('my_notes.txt', 'r') as file:
+    # Leemos el contenido línea por línea
+    for line in file:
+        # Muestra cada línea leída en la consola
+        print(line.strip())  # Usamos strip() para eliminar saltos de línea
+
+# El archivo se cierra automáticamente al salir del bloque with
+Explicación del Código:
+Escritura en el Archivo:
+
+Usamos open('my_notes.txt', 'w') para abrir el archivo en modo escritura. Si el archivo no existe, se crea.
+Utilizamos file.write() para escribir líneas en el archivo. Se agrega \n al final de cada línea para separar las notas.
+La declaración with se encarga de cerrar el archivo automáticamente.
+Lectura del Archivo:
+
+Abrimos el archivo en modo lectura con open('my_notes.txt', 'r').
+Usamos un bucle for para leer cada línea del archivo.
+print(line.strip()) muestra cada línea en la consola, eliminando los saltos de línea al final.
+
